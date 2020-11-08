@@ -2,7 +2,6 @@ import unittest
 
 from ex2 import Ticket, reconstruct_trip
 
-
 class TestEx2(unittest.TestCase):
 
     def test_short_case(self):

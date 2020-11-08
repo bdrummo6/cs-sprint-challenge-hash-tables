@@ -1,8 +1,25 @@
+# function to determine which integers appear in all the arrays in a list of arrays
 def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    num_dict = {}
+
+    # loop through each array in a list of arrays
+    for arr in arrays:
+        # loop through each integer in each array
+        for num in arr:
+            if num not in num_dict:
+                num_dict[num] = 1
+            else:
+                num_dict[num] += 1
+
+    # Create a list to hold the integers that appear in all arrays
+    result = []
+
+    for arr in num_dict.items():
+        if arr[1] == len(arrays):
+            result.append(arr[0])
 
     return result
 
